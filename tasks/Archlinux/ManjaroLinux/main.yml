@@ -1,0 +1,22 @@
+---
+# - debug:
+#     msg: "Hello Arch! Woe"
+
+- name: Dependency
+  community.general.pacman:
+    name:
+    - patch
+    - yay
+    - base-devel  # Fix
+    state: latest
+    # update_cache: true
+  become: true
+  when: false
+
+- name: Install WoeUSB-ng
+  kewlfft.aur.aur:
+    name: woeusb-ng
+    use: makepkg
+    state: present
+  become: yes
+  become_user: aur_builder

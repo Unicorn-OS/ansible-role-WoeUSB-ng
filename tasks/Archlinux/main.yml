@@ -1,0 +1,6 @@
+---
+
+- name: Arch Distro specific
+  include_tasks: "{{ ansible_lsb.id }}/main.yml"
+
+- ansible.builtin.meta: end_play
