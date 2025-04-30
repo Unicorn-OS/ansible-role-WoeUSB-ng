@@ -23,4 +23,6 @@
   become_user: aur_builder
 
 # By hand works:
+#`yay -S woeusb-ng`
+# ||
 #`pamac build woeusb-ng`
