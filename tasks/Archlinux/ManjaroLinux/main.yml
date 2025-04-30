@@ -13,6 +13,7 @@
   become: true
   when: false
 
+# Broken:
 - name: Install WoeUSB-ng
   kewlfft.aur.aur:
     name: woeusb-ng
@@ -20,3 +21,6 @@
     state: present
   become: yes
   become_user: aur_builder
+
+# By hand works:
+#`pamac build woeusb-ng`
